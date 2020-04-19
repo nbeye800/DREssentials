@@ -29,7 +29,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
 		background-color: #fefefe;
 		margin: 5% auto 15% auto; /*5% from top, 15% from bottom and centered*/
 		border: 1px solid #888;
-		width: 60%;
+		width: 30%;
 		color: black;
 }
 body.signIn{
