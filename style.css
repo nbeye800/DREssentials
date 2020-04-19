@@ -28,7 +28,7 @@ input[type=submit]{
 	font-size: 15pt;
 	padding: 10pt;
 	border: none;
-	margin-left: 50px;
+	margin-left: 150px;
 	background: pink;
 }
 /*background color for input when its focused*/
