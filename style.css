@@ -40,7 +40,7 @@ body.signIn{
 		font-family: Arial, Helvetica, sans-serif;
 		background-color: LightGray;
 }
-.btn{
+.container.btn{
 	font-size: 20pt;
 	pading-left: 20px;
 	padding-bottom: 5px;
