@@ -4,6 +4,9 @@ body{
 p{
   color: black;
 }
+label{
+ font-size: 20pt;	
+}
 img.logo{
   display: block;
   margin-left: auto;
