@@ -14,6 +14,13 @@ img.logo{
   width: 40%;
   height: 350px;
 }
+img.logo_choice_page{
+   display: block;
+   margin-left:auto;
+   margin-right: auto;
+   width: 20%;
+   height: 175px;
+}
 input[type=text], input[type=password], input[type=email]{
 		width: 100%;
 		padding: 15px;
