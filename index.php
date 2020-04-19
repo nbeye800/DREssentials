@@ -17,10 +17,11 @@
    <title>DR Essentials</title>
    <meta charset="utf-8">
    <!-- insert a link to stylesheet when made -->
+  <link href="style.css" rel="stylesheet">
  </head>
  <body>
    <!-- insert logo -->
-
+   <img class="logo" src="logo.png" alt="logo">
    <!--make button-->
   <button class='btn' type='button' onclick='openForm();'>Login</button>
 
