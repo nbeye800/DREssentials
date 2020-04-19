@@ -41,12 +41,6 @@ body.signIn{
 		background-color: LightGray;
 }
 .btn{
-	font-size: 12pt;
-	border: none;
-	outline: none;
+	font-size: 20pt;
 	color: white;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
-	margin: 0;
 }
