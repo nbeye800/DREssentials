@@ -25,10 +25,9 @@ input[type=text], input[type=password], input[type=email]{
 		background: #f1f1f1;
 }
 input[type=submit]{
-	font-size: 20pt;
-	padding: 5px;
+	font-size: 15pt;
+	padding-bottom: 5px;
 	padding-left: 10px;
-	padding-right: 10px;
 	border: none;
 	background: pink;
 }
