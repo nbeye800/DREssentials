@@ -12,7 +12,9 @@ img.logo{
 }
 input[type=text], input[type=password], input[type=email]{
 		width: 100%;
-		padding: 5px;
+		padding: 15px;
+		padding-left: 0px;
+		padding-right: 0px;
 		margin: 5px 0 22px 0;
 		display: inline-block;
 		border: none;
