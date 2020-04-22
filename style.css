@@ -22,7 +22,7 @@ img.logo_choice_page{
    height: 175px;
 }
 input[type=text], input[type=password], input[type=email]{
-		width: 100%;
+		width: 80%;
 		padding: 15px;
 		padding-left: 0px;
 		padding-right: 0px;
