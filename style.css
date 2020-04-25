@@ -66,7 +66,7 @@ body.signIn{
 	width: 50%;
 	display: block; /*make buttons in a list*/
 }
-.btn-group button:nont(:last-child){
+.btn-group button:not(:last-child){
 	border-bottom: none; /*prevent double borders*/
 }
 .btn-group button:hover{ 
