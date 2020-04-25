@@ -56,24 +56,19 @@ body.signIn{
 		background-color: LightGray;
 }
 
-/* Table style */
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
-  margin-left: 400px;
-  margin-top: 150px;
+/*Buttons to choose building */
+.trad-btn-group button{
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	padding: 10px 24px;
+	cursor: pointer;
+	width: 50%;
+	display: block; /*make buttons in a list*/
 }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.trad-btn-group, .nontrad-btn-group button:nont(:last-child){
+	border-bottom: none; /*prevent double borders*/
 }
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-tr:nth-child(odd){
-  background-color: white;
+.trad-btn-group, .nontrad-btn-group button:hover{
+	background-color: lightgrey;
 }
