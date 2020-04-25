@@ -57,7 +57,7 @@ body.signIn{
 }
 
 /*Buttons to choose building */
-.trad-btn-group button{
+.btn-group button{
 	background-color: white;
 	border: 1px solid black;
 	color: black;
@@ -66,9 +66,9 @@ body.signIn{
 	width: 50%;
 	display: block; /*make buttons in a list*/
 }
-.trad-btn-group, .nontrad-btn-group button:nont(:last-child){
+.btn-group button:nont(:last-child){
 	border-bottom: none; /*prevent double borders*/
 }
-.trad-btn-group button:hover{ /*.nontrad-btn-group button:hover{*/
+.btn-group button:hover{ 
 	background-color: lightgrey;
 }
