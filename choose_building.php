@@ -26,18 +26,6 @@
 
 include "functions.php";
 session_start();
-
-if(isset($_POST['Beck'])){updateHall($_POST['Beck'], $_SESSION['email']);}
-if(isset($_POST['Bonner'])){updateHall('Bonner', $_SESSION['email']);}
-if(isset($_POST['Berks'])){updateHall('Berks', $_SESSION['email']);}
-if(isset($_POST['Deatrick'])){updateHall('Deatrick', $_SESSION['email']);}
-if(isset($_POST['Dixon North'])){updateHall('Dixon North', $_SESSION['email']);}
-if(isset($_POST['Dixon South'])){updateHall('Dixon South', $_SESSION['email']);}
-if(isset($_POST['GBVS'])){updateHall('GBVS', $_SESSION['email']);}
-if(isset($_POST['Lehigh'])){updateHall('Lehigh', $_SESSION['email']);}
-if(isset($_POST['Rothermel'])){updateHall('Rothermel', $_SESSION['email']);}
-if(isset($_POST['Schuykill'])){updateHall('Schuykill', $_SESSION['email']);}
-if(isset($_POST['UP'])){updateHall('UP', $_SESSION['email']);}
 ?>
 
 <!DOCTYPE html>
@@ -51,21 +39,20 @@ if(isset($_POST['UP'])){updateHall('UP', $_SESSION['email']);}
   
  <img class="logo_choice_page" src="logo2.png" alt="logo">
   <div id="greeting"><p> Hello what building are you working in?</p></div>
+  
+  <div class="btn-group">
+    <button onclick="location.href='landing_page.html';">Beck</button>
+    <button onmousedown="<?php updateHall('Berks', $_SESSION['email']) ?>;" onmouseup="location.href='landing_page.html';"">Berks</button>
+    <button onclick="location.href='landing_page.html';">Bonner</button>
+    <button onclick="location.href='landing_page.html';">Deatrick</button>
+    <button onclick="location.href='landing_page.html';">Dixon North</button>
+    <button onclick="location.href='landing_page.html';">Dixon South</button>
+    <button onclick="location.href='landing_page.html';">Golden Bear Village South</button>
+    <button onmousedown="<?php updateHall('Lehigh', $_SESSION['email'])?>;" onclick="location.href='landing_page.html';">Lehigh</button>
+    <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
+    <button onclick="location.href='landing_page.html';">Schuykill</button>
+    <button onclick="location.href='landing_page.html';">University Place</button>
+  </div>
 
- <div class="btn-group">
-     <form action="/DREssentials/landing_page.html" method="post">
-        <input type="submit" name="Beck" value="Beck"/>
-        <input type="submit" name="Berks" value="Berks"/>
-        <input type="submit" name="Bonner" value="Bonner"/>
-        <input type="submit" name="Deatrick" value="Deatrick"/>
-        <input type="submit" name="Dixon North" value="Dixon North"/>
-        <input type="submit" name="Dixon South" value="Dixon South"/>
-        <input type="submit" name="GBVS" value="Golden Bear Village South"/>
-        <input type="submit" name="Lehigh" value="Lehigh"/>
-        <input type="submit" name="Rothermel" value="Rothermel/GBVW"/>
-        <input type="submit" name="Schuykill" value="Schuykill"/>
-        <input type="submit" name="UP" value="University Place"/>
-      </form>
- </div>
 </body>
 </html>
