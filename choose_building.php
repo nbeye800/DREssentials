@@ -45,7 +45,7 @@ session_start();
     <button id= 'Berks' onclick=<?php updateHall('Berks', $_SESSION['email']) ?>; onmousedown="location.href='landing_page.html';"">Berks</button>
     <button id='Bonner' onclick="location.href='landing_page.html';">Bonner</button>
     <button id='Deatrick' onclick="location.href='landing_page.html';">Deatrick</button>
-    <button id='Dixon North' onclick=<?php updateHall('Dixon North', $_SESSION['email'])?>,"location.href='landing_page.html';">Dixon North</button>
+    <button id='Dixon North' onclick="<?php updateHall('Dixon North', $_SESSION['email'])?>, location.href='landing_page.html';">Dixon North</button>
     <button id='Dixon South' onclick="location.href='landing_page.html';">Dixon South</button>
     <button id='GBVS' onclick="location.href='landing_page.html';">Golden Bear Village South</button>
     <button id='Lehigh' onclick="location.href='landing_page.html';">Lehigh</button>
