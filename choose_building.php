@@ -42,13 +42,13 @@ session_start();
   
   <div class="btn-group">
     <button onclick="location.href='landing_page.html';">Beck</button>
-    <button onmousedown=<?php updateHall('Berks', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';"">Berks</button>
+    <button onmousedown="<?php updateHall('Berks', $_SESSION['email']) ?>;" onclick="location.href='landing_page.html';"">Berks</button>
     <button onclick="location.href='landing_page.html';">Bonner</button>
     <button onclick="location.href='landing_page.html';">Deatrick</button>
     <button onclick="location.href='landing_page.html';">Dixon North</button>
     <button onclick="location.href='landing_page.html';">Dixon South</button>
     <button onclick="location.href='landing_page.html';">Golden Bear Village South</button>
-    <button onclick="location.href='landing_page.html';">Lehigh</button>
+    <button onmousedown="<?php updateHall('Lehigh', $_SESSION['email'])?>;" onclick="location.href='landing_page.html';">Lehigh</button>
     <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
     <button onclick="location.href='landing_page.html';">Schuykill</button>
     <button onclick="location.href='landing_page.html';">University Place</button>
