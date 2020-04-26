@@ -23,7 +23,7 @@ if(!$a){
 }
 }
 print($_SESSION['email']);
-print($_SESSION'name']);
+print($_SESSION['name']);
  ?>
  <!DOCTYPE html>
  <html lang="en">
