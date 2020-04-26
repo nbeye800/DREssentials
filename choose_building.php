@@ -47,7 +47,7 @@
     <button onclick="location.href='landing_page.html';">Lehigh</button>
     <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
     <button onclick="location.href='landing_page.html';">Schuykill</button>
-    <button onmousedown="<?php updateHall('University Place', $_SESSION['email']) ?>;" onclick="location.href='landing_page.php';">University Place</button>
+    <button onmousedown="<?php updateHall('University Place', $_SESSION['email']) ?>;" onclick="location.href='landing_page.html';">University Place</button>
   </div>
 </body>
 </html>
