@@ -22,6 +22,7 @@
      * Golden Bear Village South
      * Golden Bear Village West (apart of roth)
      * Honors Apartments (no desk)
+     */
 ?>
 
 <!DOCTYPE html>
