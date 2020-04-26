@@ -13,10 +13,10 @@ if(isset($_POST['email'], $_POST['password'])){
 
   $a = getUserRecord($email, $password);
   if($a = getUserRecord($email, $password)){
-    $_SESSION['email'] = $a['EMAIL'];
-    $_SESSION['password'] = $a['PASSWORD'];
-    $_SESSION['name'] = $a['NAME'];
-    $_SESSION['role'] = $a['ROLE'];
+    $_SESSION['email'] = $a['email'];
+    $_SESSION['password'] = $a['password'];
+    $_SESSION['name'] = $a['name'];
+    $_SESSION['role'] = $a['role'];
  }
 if(!$a){
   print("INVALID");
