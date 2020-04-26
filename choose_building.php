@@ -27,17 +27,17 @@
 include "functions.php";
 session_start();
 
- if(isset($_POST['Beck'])){updateHall('Beck', $_SESSION['email']);}
-      if(isset($_POST['Bonner'])){updateHall('Bonner', $_SESSION['email']);}
-      if(isset($_POST['Berks'])){updateHall('Berks', $_SESSION['email']);}
-      if(isset($_POST['Deatrick'])){updateHall('Deatrick', $_SESSION['email']);}
-      if(isset($_POST['Dixon North'])){updateHall('Dixon North', $_SESSION['email']);}
-      if(isset($_POST['Dixon South'])){updateHall('Dixon South', $_SESSION['email']);}
-      if(isset($_POST['GBVS'])){updateHall('GBVS', $_SESSION['email']);}
-      if(isset($_POST['Lehigh'])){updateHall('Lehigh', $_SESSION['email']);}
-      if(isset($_POST['Rothermel'])){updateHall('Rothermel', $_SESSION['email']);}
-      if(isset($_POST['Schuykill'])){updateHall('Schuykill', $_SESSION['email']);}
-      if(isset($_POST['UP'])){updateHall('UP', $_SESSION['email']);}
+if(isset($_POST['Beck'])){updateHall('Beck', $_SESSION['email']);}
+if(isset($_POST['Bonner'])){updateHall('Bonner', $_SESSION['email']);}
+if(isset($_POST['Berks'])){updateHall('Berks', $_SESSION['email']);}
+if(isset($_POST['Deatrick'])){updateHall('Deatrick', $_SESSION['email']);}
+if(isset($_POST['Dixon North'])){updateHall('Dixon North', $_SESSION['email']);}
+if(isset($_POST['Dixon South'])){updateHall('Dixon South', $_SESSION['email']);}
+if(isset($_POST['GBVS'])){updateHall('GBVS', $_SESSION['email']);}
+if(isset($_POST['Lehigh'])){updateHall('Lehigh', $_SESSION['email']);}
+if(isset($_POST['Rothermel'])){updateHall('Rothermel', $_SESSION['email']);}
+if(isset($_POST['Schuykill'])){updateHall('Schuykill', $_SESSION['email']);}
+if(isset($_POST['UP'])){updateHall('UP', $_SESSION['email']);}
 ?>
 
 <!DOCTYPE html>
