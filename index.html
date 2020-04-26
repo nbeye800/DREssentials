@@ -5,8 +5,23 @@
  * Document description: landing page with buttons to log in
 */
 
-/* create and include a functions.php file */
-/* Start session here */
+include "functions.php";
+session_start();
+if(isset($_POST['email'], $_POST['password'])){
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  $a = getUserRecord($email, $password);
+  if($a = getUserRecord($email, $password)){
+    $_SESSION['email'] = $a['EMAIL'];
+    $_SESSION['password'] = $a['PASSWORD'];
+    $_SESSION['name'] = $a['NAME'];
+    $_SESSION['role'] = $a['ROLE'];
+ }
+if(!$a){
+  print("INVALID");
+}
+}
 
 
 
