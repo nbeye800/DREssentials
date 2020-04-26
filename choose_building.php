@@ -41,16 +41,16 @@ session_start();
   <div id="greeting"><p> Hello what building are you working in?</p></div>
   
   <div class="btn-group">
-    <button onclick="location.href='landing_page.html';">Beck</button>
-    <button onclick="location.href='landing_page.html';"">Berks</button>
-    <button onclick="location.href='landing_page.html';">Bonner</button>
-    <button onclick="location.href='landing_page.html';">Deatrick</button>
-    <button onclick="location.href='landing_page.html';">Dixon North</button>
-    <button onclick="location.href='landing_page.html';">Dixon Sourth</button>
-    <button onclick="location.href='landing_page.html';">Golden Bear Village South</button>
-    <button onclick="location.href='landing_page.html';">Lehigh</button>
-    <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
-    <button onclick="location.href='landing_page.html';">Schuykill</button>
+    <button onmousedown=<?php updateHall('Beck', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Beck</button>
+    <button onmousedown=<?php updateHall('Berks', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';"">Berks</button>
+    <button onmousedown=<?php updateHall('Bonner', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Bonner</button>
+    <button onmousedown=<?php updateHall('Deatrick', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Deatrick</button>
+    <button onmousedown=<?php updateHall('Dixon North', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Dixon North</button>
+    <button onmousedown=<?php updateHall('Dixon South', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Dixon South</button>
+    <button onmousedown=<?php updateHall('Golden Bear Village South', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Golden Bear Village South</button>
+    <button onmousedown=<?php updateHall('Lehigh', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Lehigh</button>
+    <button onmousedown=<?php updateHall('Rothermel', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
+    <button onmousedown=<?php updateHall('Schuykill', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Schuykill</button>
     <button onmousedown=<?php updateHall('University Place', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">University Place</button>
   </div>
 </body>
