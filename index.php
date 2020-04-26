@@ -19,11 +19,9 @@ if(isset($_POST['email'], $_POST['password'])){
     $_SESSION['role'] = $a['role'];
  }
 if(!$a){
-  print("INVALID");
+  print("INVALID"); //need a better error message
 }
 }
-print($_SESSION['email']);
-print($_SESSION['name']);
  ?>
  <!DOCTYPE html>
  <html lang="en">
