@@ -8,43 +8,17 @@
 <body>
 <h1> GSE Schedule</h1>
 <p>This is the updated GSE Schedule</p>
-<style>
 
-</style>
 </head>
 <body>
 
 <p>Click on the buttons inside the tabbed menu to view other schedules:</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')"> DR Schedule</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')"> CA Schedule</button>
+  <button class="tablinks" onclick="location.href='DRschedule.html';"> DR Schedule</button>
+  <button class="tablinks" onclick="location.href='CAschedule.html';"> CA Schedule</button>
 </div>
 
-<div id="London" class="tabcontent">
-  <a href="http://csitrd.kutztown.edu/DREssentials/DRschedule.html" target="_blank"> DR Schedule</a> 
-</div>
-
-<div id="Paris" class="tabcontent">
-<a href="http://csitrd.kutztown.edu/DREssentials/CAschedule.html" target="_blank"> CA Schedule</a> 
-</div>
-
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
  <iframe src="/DREssentials/GSE_schedule.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>
  <!-- source: https://gist.github.com/tzmartin/1cf85dc3d975f94cfddc04bc0dd399be -->
  </body>
