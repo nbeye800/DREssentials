@@ -17,9 +17,9 @@
     // try to insert into the database
     // if an error occurs return FALSE
     try {
-        $db =  new PDO("sqlite:users.db");
+        $db =  new PDO("sqlite:database2.db");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM ACCOUNT_INFO WHERE EMAIL='$email' and PASSWORD='$password'";
+        $sql = "SELECT * FROM accounts WHERE email='$email' and password='$password'";
         $stmt = $db->query($sql);
         // there should only be a single record
         return $stmt->fetch(PDO::FETCH_ASSOC);
