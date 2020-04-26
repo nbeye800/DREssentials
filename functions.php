@@ -17,7 +17,7 @@
     // try to insert into the database
     // if an error occurs return FALSE
     try {
-        $db =  new PDO("sqlite3:database2.db");
+        $db =  new PDO("sqlite:database2.db");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM accounts WHERE email='$email' and password='$password'";
         $stmt = $db->query($sql);
