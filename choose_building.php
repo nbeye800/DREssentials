@@ -23,6 +23,8 @@
      * Golden Bear Village West (apart of roth)
      * Honors Apartments (no desk)
      */
+
+include "functions.php";
 ?>
 
 <!DOCTYPE html>
