@@ -41,17 +41,18 @@ session_start();
   <div id="greeting"><p> Hello what building are you working in?</p></div>
   
   <div class="btn-group">
-    <button onmousedown=<?php updateHall('Beck', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Beck</button>
-    <button onclick=<?php updateHall('Berks', $_SESSION['email']) ?>; onmousedown="location.href='landing_page.html';"">Berks</button>
-    <button onclick="location.href='landing_page.html';">Bonner</button>
-    <button onclick="location.href='landing_page.html';">Deatrick</button>
-    <button onclick="location.href='landing_page.html';">Dixon North</button>
-    <button onclick="location.href='landing_page.html';">Dixon South</button>
-    <button onclick="location.href='landing_page.html';">Golden Bear Village South</button>
-    <button onclick="location.href='landing_page.html';">Lehigh</button>
-    <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
-    <button onclick="location.href='landing_page.html';">Schuykill</button>
-    <button onclick="location.href='landing_page.html';">University Place</button>
+    <button id='Beck' onclick="location.href='landing_page.html';">Beck</button>
+    <button id= 'Berks' onclick=<?php updateHall('Berks', $_SESSION['email']) ?>; onmousedown="location.href='landing_page.html';"">Berks</button>
+    <button id='Bonner' onclick="location.href='landing_page.html';">Bonner</button>
+    <button id='Deatrick' onclick="location.href='landing_page.html';">Deatrick</button>
+    <button id='Dixon North' onclick=<?php updateHall('Dixon North', $_SESSION['email'])?>,"location.href='landing_page.html';">Dixon North</button>
+    <button id='Dixon South' onclick="location.href='landing_page.html';">Dixon South</button>
+    <button id='GBVS' onclick="location.href='landing_page.html';">Golden Bear Village South</button>
+    <button id='Lehigh' onclick="location.href='landing_page.html';">Lehigh</button>
+    <button id='Rothermel' onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
+    <button id='Schuykill' onclick="location.href='landing_page.html';">Schuykill</button>
+    <button id='UP' onclick="location.href='landing_page.html';">University Place</button>
   </div>
+ 
 </body>
 </html>
