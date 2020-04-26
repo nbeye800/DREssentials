@@ -43,7 +43,7 @@ session_start();
   <div class="btn-group">
     <button onmousedown=<?php updateHall('Beck', $_SESSION['email']) ?>; onclick="location.href='landing_page.html';">Beck</button>
     <button onclick=<?php updateHall('Berks', $_SESSION['email']) ?>; onmousedown="location.href='landing_page.html';"">Berks</button>
-    <button onclick=<?php updateHall('Bonner', $_SESSION['email']) ?>; onmousedown="location.href='landing_page.html';">Bonner</button>
+    <button onclick="location.href='landing_page.html';">Bonner</button>
     <button onclick="location.href='landing_page.html';">Deatrick</button>
     <button onclick="location.href='landing_page.html';">Dixon North</button>
     <button onclick="location.href='landing_page.html';">Dixon South</button>
