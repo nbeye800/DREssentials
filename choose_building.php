@@ -54,7 +54,7 @@ session_start();
       if(isset($_POST['UP'])){updateHall('UP', $_SESSION['email']);}
   ?>
  <div class="btn-group">
-     <form method="post" action="location.href='landing_page.html';">
+     <form action="/DREssentials/landing_page.html" method="post">
         <input type="submit" name="Beck" value="Beck"/>
         <input type="submit" name="Berks" value="Berks"/>
         <input type="submit" name="Bonner" value="Bonner"/>
