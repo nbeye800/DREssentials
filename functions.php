@@ -30,4 +30,26 @@
     }
 }
 
+/* Created By: Nichole Beyer
+ * Function Name: updateHall()
+ * Description: update what hall the DR/ARD/BD is in
+ * Parameters: (string) $email: the user's email
+ * 				(string) $newhall: the name of the new hall
+ * Return Value: none
+ */
+function updateHall($newHall, $email){
+	try{
+		$db = new PDO("sqlite:database2.db");
+		$sql = "UPDATE accounts SET hall = ? WHERE email = ?";
+		$stmt = $db->prepare($sql);
+		$stmt->execute([$newHall, $email]);
+		//header("Refresh:0");
+		return TRUE;
+	}
+	catch (Exception $e){
+		print"<p>$e</p>";
+		return FALSE;
+	}
+		$db=null;
+}
 ?>
