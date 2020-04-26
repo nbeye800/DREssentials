@@ -53,34 +53,11 @@ body {font-family: Arial;}
 <p>Click on the buttons inside the tabbed menu to view other schedules:</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')"> GSE Schedule</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')"> DR Schedule</button>
-</div>
-
-<div id="London" class="tabcontent">
-  <a href="http://csitrd.kutztown.edu/DREssentials/GSEschedule.html" target="_blank"> GSE Schedule</a> 
-</div>
-
-<div id="Paris" class="tabcontent">
-<a href="http://csitrd.kutztown.edu/DREssentials/DRschedule.html" target="_blank"> DR Schedule</a> 
+   <button onclick="location.href='GSEschedule.html';"> GSE schedule</button>
+   <button onclick="location.href='DRschedule.html';"> DR schedule</button>
 </div>
 
 
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
  <iframe src="/DREssentials/CA_schedule.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>
  <!-- source: https://gist.github.com/tzmartin/1cf85dc3d975f94cfddc04bc0dd399be -->
  </body>
