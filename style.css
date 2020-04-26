@@ -76,14 +76,14 @@ body.signIn{
 body {font-family: Arial;} 
 
 /* Style the tab */
-.tab {
+.tablinks {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tablinks button {
   background-color: inherit;
   float: left;
   border: none;
@@ -95,12 +95,12 @@ body {font-family: Arial;}
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tablinks button:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tablinks button.active {
   background-color: #ccc;
 }
 
