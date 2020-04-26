@@ -17,6 +17,7 @@ if(isset($_POST['email'], $_POST['password'])){
     $_SESSION['password'] = $a['password'];
     $_SESSION['name'] = $a['name'];
     $_SESSION['role'] = $a['role'];
+    $_SESSION['hall'] = $a['hall'];
  }
 if(!$a){
   print("INVALID"); //need a better error message
