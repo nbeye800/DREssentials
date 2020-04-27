@@ -48,7 +48,7 @@ session_start();
     <button onclick="location.href='landing_page.html';">Dixon North</button>
     <button onclick="location.href='landing_page.html';">Dixon South</button>
     <button onclick="location.href='landing_page.html';">Golden Bear Village South</button>
-    <button onmousedown="<?php updateHall('Lehigh', $_SESSION['email'])?>;" onclick="location.href='landing_page.html';">Lehigh</button>
+    <button onmousedown="<?php updateHall('Lehigh', $_SESSION['email'])?>;" onmouseup="location.href='landing_page.html';">Lehigh</button>
     <button onclick="location.href='landing_page.html';">Rothermel/GBVW</button>
     <button onclick="location.href='landing_page.html';">Schuykill</button>
     <button onclick="location.href='landing_page.html';">University Place</button>
