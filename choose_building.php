@@ -41,7 +41,7 @@ session_start();
   <div id="greeting"><p> Hello what building are you working in?</p></div>
   
   <div class="btn-group">
-     <form action="/DREssentials/landing_page.html" method="post">
+     <form method="post">
         <input type="submit" name="Beck" value="Beck"/>
         <input type="submit" name="Berks" value="Berks"/>
         <input type="submit" name="Bonner" value="Bonner"/>
@@ -57,7 +57,8 @@ session_start();
   </div>
 
   <?php
-
+    print($_POST['submit']);
+  
     if(isset($_POST['Beck'])){$a=updateHall('Beck', $_SESSION['email']);}
     if(isset($_POST['Bonner'])){updateHall('Bonner', $_SESSION['email']);}
     if(isset($_POST['Berks'])){updateHall('Berks', $_SESSION['email']);}
