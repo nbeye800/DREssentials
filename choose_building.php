@@ -58,7 +58,7 @@ session_start();
 
   <?php
 
-    if(isset($_POST['Beck'])){updateHall('Beck', $_SESSION['email']);}
+    if(isset($_POST['Beck'])){updateHall($_POST['Beck'], $_SESSION['email']);}
     if(isset($_POST['Bonner'])){updateHall('Bonner', $_SESSION['email']);}
     if(isset($_POST['Berks'])){updateHall('Berks', $_SESSION['email']);}
     if(isset($_POST['Deatrick'])){updateHall('Deatrick', $_SESSION['email']);}
