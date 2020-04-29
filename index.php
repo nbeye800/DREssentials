@@ -7,13 +7,13 @@
 
 include "functions.php";
 session_start();
-if(isset($_POST['email'], $_POST['password'])){
+if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
- 
+  $hall = $_POST['hall'];
 
   $a = getUserRecord($email, $password);
-  
+  $b = updateHall($hall, $email);
   if($a = getUserRecord($email, $password)){
     $_SESSION['email'] = $a['email'];
     $_SESSION['password'] = $a['password'];
@@ -68,12 +68,6 @@ if(!$a){
    </div>
    </form>
   </div>
-  <?php
-   if(isset($_POST['hall'])){
-    $hall = $_POST['hall'];
-    $b = updateHall($hall, $_SESSION['email']);
-   }
-   ?>
  
 </body>
 </html>
