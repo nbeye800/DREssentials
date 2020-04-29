@@ -13,6 +13,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
   $hall = $_POST['hall'];
 
   $a = getUserRecord($email, $password);
+  
   if($a = getUserRecord($email, $password)){
     $_SESSION['email'] = $a['email'];
     $_SESSION['password'] = $a['password'];
@@ -23,6 +24,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
 if(!$a){
   print("INVALID"); //need a better error message
 }
+  $b = updateHall($_POST['hall'], $_SESSION['email']);
 }
  ?>
  <!DOCTYPE html>
@@ -62,7 +64,7 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login" onclick="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;">
+     <input type="submit" placeholder="Login">
    </div>
    </form>
   </div>
