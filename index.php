@@ -7,10 +7,10 @@
 
 include "functions.php";
 session_start();
-if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
+if(isset($_POST['email'], $_POST['password'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $hall = $_POST['hall'];
+ 
 
   $a = getUserRecord($email, $password);
   
@@ -24,7 +24,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
 if(!$a){
   print("INVALID"); //need a better error message
 }
-  $b = updateHall($_POST['hall'], $_SESSION['email']);
+  
 }
  ?>
  <!DOCTYPE html>
@@ -68,6 +68,12 @@ if(!$a){
    </div>
    </form>
   </div>
+  <?php
+   if(isset($_POST['hall'])){
+    $hall = $_POST['hall'];
+    $b = updateHall($hall, $_SESSION['email']);
+   }
+   ?>
  
 </body>
 </html>
