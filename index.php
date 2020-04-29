@@ -63,7 +63,7 @@ print($_POST['hall'])
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login" onlclick="<?php updateHall($_SESSION['hall'], $_SESSION['email'])?>;">
+     <input type="submit" placeholder="Login" onlclick="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;">
    </div>
    </form>
   </div>
