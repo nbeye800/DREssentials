@@ -53,7 +53,7 @@ print($_POST['hall'])
        <option value="Beck">Beck</option>
        <option value="Berks">Berks</option>
        <option value="Bonner">Bonner</option>
-       <option value="Deatrick"><Deatrick</option>
+       <option value="Deatrick">Deatrick</option>
        <option value="Dixon North">Dixon North</option>
        <option value="Dixon South">Dixon South</option>
        <option value="GBVS">Golden Bear Village South</option>
