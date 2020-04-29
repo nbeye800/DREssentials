@@ -20,6 +20,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
     $_SESSION['name'] = $a['name'];
     $_SESSION['role'] = $a['role'];
     $_SESSION['hall'] = $a['hall'];
+    header('Location: http://csit.kutztown.edu/landing_page.html');
  }
 if(!$a){
   print("INVALID"); //need a better error message
@@ -41,7 +42,7 @@ if(!$a){
    <!--make button-->
  
   <div id='id01' class="signIn">
-   <form class="signIn" action="landing_page.html" method="post">
+   <form class="signIn" action="index.php" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
