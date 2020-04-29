@@ -7,9 +7,10 @@
 
 include "functions.php";
 session_start();
-if(isset($_POST['email'], $_POST['password'])){
+if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
+  $hall = $_POST['hall'];
 
   $a = getUserRecord($email, $password);
   if($a = getUserRecord($email, $password)){
@@ -17,7 +18,7 @@ if(isset($_POST['email'], $_POST['password'])){
     $_SESSION['password'] = $a['password'];
     $_SESSION['name'] = $a['name'];
     $_SESSION['role'] = $a['role'];
-   // $_SESSION['hall'] = $a['hall'];
+    $_SESSION['hall'] = $a['hall'];
  }
 if(!$a){
   print("INVALID"); //need a better error message
@@ -38,14 +39,30 @@ if(!$a){
    <!--make button-->
  
   <div id='id01' class="signIn">
-   <form class="signIn" action="/DREssentials/choose_building.php" method="post">
+   <form class="signIn" action="/DREssentials/landing_page.php" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
     
     <label for="password_1"><b>Password</b></label>
     <input type="password" id="password_1" placeholder="Enter Your KU Password" name="password" required>
-    <input type="submit" placeholder="Login">
+    
+     <label for="list"><b>Where is your shift?</b></label>
+     <select id="list" name="hall">
+       <option value="Beck">Beck</option>
+       <option value="Berks">Berks</option>
+       <option value="Bonner">Bonner</option>
+       <option value="Deatrick"><Deatrick</option>
+       <option value="Dixon North">Dixon North</option>
+       <option value="Dixon South">Dixon South</option>
+       <option value="GBVS">Golden Bear Village South</option>
+       <option value="Lehigh">Lehigh</option>
+       <option value="Rothermel">Rothermel/GBVW</option>
+       <option value="Schuykill">Schuykill</option>
+       <option value="UP">University Place</option>
+     </select>
+     
+     <input type="submit" placeholder="Login" onlclick="<?php updateHall($_SESSION['hall'], $_SESSION['email'])?>;">
    </div>
    </form>
   </div>
