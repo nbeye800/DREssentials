@@ -62,7 +62,7 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login" onmousedown="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;">
+     <input type="submit" placeholder="Login" onclick="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;">
    </div>
    </form>
   </div>
