@@ -64,10 +64,15 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login" onclick="location.href='landing_page.html';">
+     <input type="submit" placeholder="Login" onclick="redirect()">
    </div>
    </form>
   </div>
- 
+
+   <script>
+     function redirect(){
+       location.href="landing_page.html";
+     }
+   </script>
 </body>
 </html>
