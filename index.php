@@ -64,7 +64,7 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login">
+     <input type="submit" placeholder="Login" onclick="location.href='landing_page.html';">
    </div>
    </form>
   </div>
