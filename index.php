@@ -24,6 +24,7 @@ if(!$a){
   print("INVALID"); //need a better error message
 }
 }
+print($_POST['hall'])
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -39,7 +40,7 @@ if(!$a){
    <!--make button-->
  
   <div id='id01' class="signIn">
-   <form class="signIn" action="/DREssentials/landing_page.html" method="post">
+   <form class="signIn" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
