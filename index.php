@@ -39,7 +39,7 @@ if(!$a){
    <!--make button-->
  
   <div id='id01' class="signIn">
-   <form class="signIn" action="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;" method="post">
+   <form class="signIn" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
@@ -62,7 +62,7 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input type="submit" placeholder="Login" onlclick="location.href='landing_page.html';">
+     <input type="submit" placeholder="Login" onmousedown="<?php updateHall($_POST['hall'], $_SESSION['email'])?>;" onmouseup="location.href='landing_page.html';">
    </div>
    </form>
   </div>
