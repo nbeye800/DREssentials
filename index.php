@@ -20,7 +20,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
     $_SESSION['name'] = $a['name'];
     $_SESSION['role'] = $a['role'];
     $_SESSION['hall'] = $a['hall'];
-    header('Location: http://csit.kutztown.edu/landing_page.html');
+    header('Location: http://csit.kutztown.edu/DREssentials/landing_page.html');
  }
 if(!$a){
   print("INVALID"); //need a better error message
