@@ -41,7 +41,7 @@ if(!$a){
    <!--make button-->
  
   <div id='id01' class="signIn">
-   <form class="signIn" method="post">
+   <form class="signIn" action="DREssentials/landing_page.html" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
@@ -64,7 +64,7 @@ if(!$a){
        <option value="UP">University Place</option>
      </select>
      
-     <input onclick="location.href='landing_page.html';" type="submit" placeholder="Login">
+     <input type="submit" placeholder="Login">
    </div>
    </form>
   </div>
