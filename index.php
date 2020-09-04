@@ -25,7 +25,7 @@ if(isset($_POST['email'], $_POST['password'], $_POST['hall'])){
 if(!$a){
   print("INVALID"); //need a better error message
 }
-  
+
 }
  ?>
  <!DOCTYPE html>
@@ -37,19 +37,20 @@ if(!$a){
   <link href="style.css" rel="stylesheet">
  </head>
  <body>
+   <p>HI THIS UPDATED TO GIT<p>
    <!-- insert logo -->
  <img class="logo" src="logo2.png" alt="logo">
    <!--make button-->
- 
+
   <div id='id01' class="signIn">
    <form class="signIn" action="index.php" method="post">
    <div class="container">
     <label for="email_1"><b>Email</b></label>
     <input type="email" id="email_1" placeholder="Enter Your KU Email" name="email" required>
-    
+
     <label for="password_1"><b>Password</b></label>
     <input type="password" id="password_1" placeholder="Enter Your KU Password" name="password" required>
-    
+
      <label for="list"><b>Where is your shift?</b></label>
      <select id="list" name="hall">
        <option value="Beck">Beck</option>
@@ -64,7 +65,7 @@ if(!$a){
        <option value="Schuykill">Schuykill</option>
        <option value="UP">University Place</option>
      </select>
-     
+
      <input type="submit" placeholder="Login">
    </div>
    </form>
