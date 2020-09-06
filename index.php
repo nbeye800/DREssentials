@@ -37,7 +37,6 @@ if(!$a){
   <link href="style.css" rel="stylesheet">
  </head>
  <body>
-   <p>HI THIS UPDATED TO GIT<p>
    <!-- insert logo -->
  <img class="logo" src="logo2.png" alt="logo">
    <!--make button-->
