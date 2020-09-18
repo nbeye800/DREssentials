@@ -11,7 +11,7 @@
  * Return Value: (array) The user's record if it exists, otherwise an empty
  *               array
  */
- 
+
  function getUserRecord($email, $password) {
 
     // try to insert into the database
@@ -52,4 +52,30 @@ function updateHall($newHall, $email){
 	}
 		$db=null;
 }
+
+/* Created By: Nichole Beyer
+ * Function Name: insertDeskLog()
+ * Description: insert the desk log entry into the database
+ * Parameters:
+
+ * Return Value: (boolean) TRUE if the information was successfully inserted, otherwise FALSE
+ */
+ function insertDeskLog($date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building){
+   // try to insert into the database
+   // is an error occurs return FALSE
+   try{
+     $db = new PDO("sqlite:database2.db");
+     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     $sql = "INSERT INTO DeskLog (date, time_in, time_out, name, num_packages, keys_equipment, rd, total_hours, building)
+                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+     $stmt = $db->prepare($sql);
+     $stmt->execute([$date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building]);
+     return TRUE;
+   } //end try
+   catch (Exception $e) {
+       print "<p>$e</p>";
+       return FALSE;
+   }
+
+ }
 ?>
