@@ -60,16 +60,16 @@ function updateHall($newHall, $email){
 
  * Return Value: (boolean) TRUE if the information was successfully inserted, otherwise FALSE
  */
- function insertDeskLog($date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building){
+ function insertDeskLog($date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building, $comments){
    // try to insert into the database
    // is an error occurs return FALSE
    try{
      $db = new PDO("sqlite:database2.db");
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-     $sql = "INSERT INTO DeskLog (date, time_in, time_out, name, num_packages, keys_equipment, rd, total_hours, building)
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+     $sql = "INSERT INTO DeskLog (date, time_in, time_out, name, num_packages, keys_equipment, rd, total_hours, building, comments)
+                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
      $stmt = $db->prepare($sql);
-     $stmt->execute([$date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building]);
+     $stmt->execute([$date, $timein, $timeout, $name, $numpackages, $k_e, $rd, $totalhours, $building, $comments]);
      return TRUE;
    } //end try
    catch (Exception $e) {
@@ -77,5 +77,107 @@ function updateHall($newHall, $email){
        return FALSE;
    }
 
+ }
+
+ /* Created By: Nichole Beyer
+ * Function Name: printDeskLog
+ * Description: Print desk logs for building the user is logged in for
+ * Parameters: (string) $building
+ * Return Value: none
+ */
+ function printDeskLog($building){
+   $db = new PDO("sqlite:database2.db");
+   $sql = "SELECT date, time_in, time_out, name, num_packages, keys_equipment, rd, total_hours, building, comments FROM DeskLog WHERE building = '$building'";// order by date and time_in desc";
+   $stmt = $db->query($sql);
+   print("<h1> DATE     | TIME IN    | TIME OUT   | NAME        | COMMENTS           | # PACKAGES | KEYS & EQUIPMENT | RD  | TOTAL HOURS </h1>");
+
+   $records = $stmt->fetchall(PDO::FETCH_ASSOC);
+   foreach($records as $DeskLog){
+    print($DeskLog['date']);
+    print(" ");
+
+    print($DeskLog['time_in']);
+    print(" ");
+
+    print($DeskLog['time_out']);
+    print(" ");
+
+    print($DeskLog['name']);
+    print(" ");
+
+    print($DeskLog['comments']);
+    print(" ");
+
+    print($DeskLog['num_packages']);
+    print(" ");
+
+    print($DeskLog['keys_equipment']);
+    print(" ");
+
+    print($DeskLog['rd']);
+    print(" ");
+
+    print($DeskLog['total_hours']);
+    print(" ");
+
+    print("<br>");
+   }
+ }
+
+ /* Created By: Nichole Beyer
+  * Function Name: insertPassAlong()
+  * Description: insert the Pass ALong entry into the database
+  * Parameters:
+
+  * Return Value: (boolean) TRUE if the information was successfully inserted, otherwise FALSE
+  */
+ function insertPassAlong($title, $message, $author, $date, $time, $building){
+   // try to insert into the database
+   // is an error occurs return FALSE
+   try{
+     $db = new PDO("sqlite:database2.db");
+     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     $sql = "INSERT INTO PassAlong (title, message, author, date, time, building)
+                          VALUES (?, ?, ?, ?, ?, ?)";
+     $stmt = $db->prepare($sql);
+     $stmt->execute([$title, $message, $author, $date, $time, $building]);
+     return TRUE;
+   } //end try
+   catch (Exception $e) {
+       print "<p>$e</p>";
+       return FALSE;
+   }
+ }
+
+ /* Created By: Nichole Beyer
+ * Function Name: printPassAlong
+ * Description: Print pass along entries for building the user is logged in for
+ * Parameters: (string) $building
+ * Return Value: none
+ */
+ function printPassAlong($building){
+   $db = new PDO("sqlite:database2.db");
+   $sql = "SELECT title, message, author, date, time, building FROM PassAlong WHERE building = '$building' order by date desc ";
+   $stmt = $db->query($sql);
+   print("<h1> DATE      | TIME    | DR SUBMITTING   | SUBJECT         | MESSAGE</h1>");
+   $records = $stmt->fetchall(PDO::FETCH_ASSOC);
+   foreach($records as $PassAlong){
+     print($PassAlong['date']);
+     print(" ");
+
+     print($PassAlong['time']);
+     print(" ");
+
+     print($PassAlong['author']);
+     print(" ");
+
+     print($PassAlong['title']);
+     print(" ");
+
+     print($PassAlong['message']);
+     print(" ");
+
+     print("<br>");
+   }
  }
 ?>
