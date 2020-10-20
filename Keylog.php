@@ -28,28 +28,28 @@ if(isset($_SESSION['hall'])){$building = $_SESSION['hall'];}
 
   <form id="id01" action="keylog.php" method="post">
     <div class = "createkeyLog">
-      <label for="dDate">Date:</label>
+      <label for="kDate">Date:</label>
       <input type="date" id="dDate" name="date"><br>
 	  
-	  <label for="dName">Name (First and Last):</label><br>
+	  <label for="kName">Name (First and Last):</label><br>
       <input type="text" id="dName" name="name"><br>
 	  
-	  <label for="dkey">Key #:</label><br>
+	  <label for="kkey">Key #:</label><br>
       <input type="text" id="dkey" name="key_num"><br>
 	  
-	  <label for="dId">Type of ID:</label><br>
+	  <label for="kId">Type of ID:</label><br>
       <input type="text" id="dId" name="type_of_id"><br>
 
-      <label for="dTimeout">Time Out:</label>
+      <label for="kTimeout">Time Out:</label>
       <input type="time" id="dTimeOut" name="timeOut"><br>
 	  
-	   <label for="dInt">DR Initials :</label><br>
+	   <label for="kInt">DR Initials :</label><br>
       <input type="text" id="dInt" name="dr_initials"><br>
 	   
-	  <label for="dTimeIn">Time In:</label>
+	  <label for="kTimeIn">Time In:</label>
       <input type="time" id="dTimeIn" name="timeIn"><br>
 	  
-	  <label for="dInt">DR Initials :</label><br>
+	  <label for="kInt">DR Initials :</label><br>
       <input type="text" id="dInt" name="dr_initials"><br>
 
       <input type="submit" value="Submit">
