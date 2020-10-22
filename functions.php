@@ -180,4 +180,72 @@ function updateHall($newHall, $email){
      print("<br>");
    }
  }
+
+/* Created By: Nichole Beyer, Modified By: Henok Araya
+ * Function Name: insertKeyLog()
+ * Description: insert the key log entry into the database
+ * Parameters:
+ * Return Value: (boolean) TRUE if the information was successfully inserted, otherwise FALSE
+ */
+ function insertKeyLog($date, $name, $key_num, $type_of_id, $time_out, $dr_initials, $time_in, $dr_initials){
+   // try to insert into the database
+   // is an error occurs return FALSE
+   try{
+     $db = new PDO("sqlite:database2.db");
+     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+     $sql = "INSERT INTO KeyLog (date, name, key_num, type_of_id, time_out, dr_initials, time_in, dr_initials)
+                          VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+     $stmt = $db->prepare($sql);
+     $stmt->execute([$date, $name, $key_num, $type_of_id, $time_out, $dr_initials, $time_in, $dr_initials]);
+     return TRUE;
+   } //end try
+   catch (Exception $e) {
+       print "<p>$e</p>";
+       return FALSE;
+   }
+
+ }
+
+ /* Created By: Nichole Beyer, Modified By: Henok Araya
+ * Function Name: printKeyLog
+ * Description: Print Key logs for building the user is logged in for
+ * Parameters: (string) $building
+ * Return Value: none
+ */
+ function printKeyLog($building){
+   $db = new PDO("sqlite:database2.db");
+   $sql = "SELECT date, name, key_num, type_of_id, time_out, dr_initials, time_in, dr_initials FROM KeyLog WHERE building = '$building'";// order by date and time_in desc";
+   $stmt = $db->query($sql);
+   print("<h1> DATE     | Name    | Key #   | Type of ID    | Time Out | DR Initials | Time In | DR Initials | </h1>");
+
+   $records = $stmt->fetchall(PDO::FETCH_ASSOC);
+   foreach($records as $KeyLog){
+    print($KeyLog['date']);
+    print(" ");
+
+    print($KeyLog['name']);
+    print(" ");
+
+    print($KeyLog['key_num']);
+    print(" ");
+
+    print($KeyLog['type_of_id']);
+    print(" ");
+
+    print($KeyLog['time_out']);
+    print(" ");
+
+    print($KeyLog['dr_initials']);
+    print(" ");
+
+    print($KeyLog['time_in']);
+    print(" ");
+
+    print($KeyLog['dr_initials']);
+    print(" ");
+
+
+    print("<br>");
+   }
+ }
 ?>

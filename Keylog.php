@@ -73,4 +73,8 @@ if(isset($_SESSION['hall'])){$building = $_SESSION['hall'];}
     @$b = printKeyLog($building);
   ?>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 033eec22d06d0ef9b088a65a309b035250200cb7
