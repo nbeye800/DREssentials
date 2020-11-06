@@ -1,0 +1,43 @@
+﻿body{
+	font-family: Arial;
+	background-color: #701931;	
+}
+
+label{
+	color: #ffffff;
+}
+
+.table{
+  background-color: #ffffff;
+}
+
+.table-responsive {
+  display: inline-table;
+}
+
+.relocate-btn{
+	display: flex;
+	flex-flow: row wrap
+}
+
+.relocate-btn button{
+	flex-grow: 1;
+	margin: 10px;
+}
+
+/* .relocate-btn button:first-of-type,
+.relocate-btn button:nth-of-type(2),
+.relocate-btn button:nth-of-type(3){
+	width: 33%;
+    float: left;
+	margin-top: 0;
+	padding: 20px 0;
+}
+
+.relocate-btn button:nth-of-type(4),
+.relocate-btn button:last-of-type{
+	width: 50%;
+    float: left;
+    padding: 20px 0;
+} */
+
